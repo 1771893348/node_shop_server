@@ -9,17 +9,22 @@ router.get("/",(req,res)=>{
     var data = {
         "code":"0",
         "message":"success",
-        "data":[
-            {
-                "image":base_url+"1.jpeg",
-            },
-            {
-                "image":base_url+"2.jpeg",
-            },
-            {
-                "image":base_url+"3.jpeg",
-            },
-        ]
+        "data":{
+            "slides":[
+                {
+                    "image":base_url+"1.jpeg",
+                    "goodsId":"001"
+                },
+                {
+                    "image":base_url+"2.jpeg",
+                    "goodsId":"002"
+                },
+                {
+                    "image":base_url+"3.jpeg",
+                    "goodsId":"003"
+                },
+            ]
+        }
     };
     res.send(data);
 });
